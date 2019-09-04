@@ -15,7 +15,7 @@ nav {
   font-weight: 600;
   font-size: 5ch;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 10%;
