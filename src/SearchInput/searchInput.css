@@ -53,6 +53,8 @@
   background-color: #F4D8CD;
   height: 32px;
   min-width: 500px;
+  padding-left: 40px;
+  font-size: 1.5ch;
 }
 
 .search-input-container .search-input-label-container {
