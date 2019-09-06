@@ -5,11 +5,9 @@
   align-items: center;
 }
 
-.search-input-component .filter-icon {
-  transform: translate(-10px, 0px);
-  position: relative;
-  font-size: 25px;
-  color: #EDB183;
+.search-input-container input {
+  border: 1px solid #9E9E9E;
+  outline: none;
 }
 
 .search-button-container {
@@ -20,24 +18,26 @@
   position: relative;
 }
 
-.search-close-container .close-x {
-  color: #161115;
-  font-size: 25px;
-  transform: translate(-26px, 0px);
-}
-
 .search-input-component button {
   position: relative;
   transform: translate(-10px, -2px);
   height: 32px;
-  background-color: #EDB183;
-  color: #161115;
+  color: #fff;
+  background-color: #76b900;
   margin: 0 0 0 10px;
+  padding: 0 10px;
   font-weight: 500;
   font-size: 1.5ch;
   cursor: pointer;
   border: none;
   outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.search-input-component button:hover {
+  background-color: #BBDC80;
 }
 
 .search-input-container {
@@ -49,8 +49,7 @@
 
 .search-input-container .search-input {
   position: relative;
-  border: 0;
-  background-color: #F4D8CD;
+  background-color: #fff;
   height: 32px;
   min-width: 500px;
   padding-left: 40px;
@@ -58,8 +57,9 @@
 }
 
 .search-input-container .search-input-label-container {
-  background-color: rgba( 33, 33, 33, 0.8);
-  color: #fff;
+  background-color: #FAFAFA;
+  opacity: 0.8;
+  color: #666;
   display: block;
   padding: 5px 0;
   text-decoration: none;
@@ -74,18 +74,31 @@
 }
 
 .search-input-label-container span:hover {
-  background-color: #EDB183;
+  background-color: #EFF7E0;
 }
 
 .search-input-container label {
-  color: #F4D8CD;
+  color: #333;
   font-size: 3ch;
 }
 
 .feather-icon {
-  color: #F4D8CD;
-  background-color: #3A2E39;
+  color: #333;
   font-size: 32px;
   transform: translate(0, -32px);
+  cursor: pointer;
+}
+
+.search-input-component .filter-icon {
+  transform: translate(-10px, 0px);
+  position: relative;
+  font-size: 25px;
+  color: #333;
+}
+
+.search-close-container .close-x {
+  color: #333;
+  font-size: 25px;
+  transform: translate(-28px, 1px);
   cursor: pointer;
 }

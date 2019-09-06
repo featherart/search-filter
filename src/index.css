@@ -3,15 +3,15 @@ body {
   font-family: "Monaco", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #3A2E39;
+  background-color: #fff;
   
 }
 
 nav {
   height: 3ch;
   width: 100%;
-  background-color: #F4D8CD;
-  color: #3A2E39;
+  background-color: #333;
+  color: #fff;
   font-weight: 600;
   font-size: 5ch;
   display: flex;

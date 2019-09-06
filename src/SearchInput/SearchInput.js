@@ -49,7 +49,7 @@ export const SearchInput = ({ label }) => {
           <FiX className='close-x' onClick={() => setQuery('')} />
       </div>
       <div className='search-button-container'>
-        <button type='submit'>submit</button>
+        <button type='submit'>Enter</button>
       </div>
     </div>
 	)
