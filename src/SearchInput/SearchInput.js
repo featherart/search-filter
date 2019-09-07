@@ -15,16 +15,16 @@ const labels = [
 export const SearchInput = ({ label }) => {
 	const [ labelsOpen, toggleLabels ] = useState(false)
 	const [ query, setQuery ] = useState('')
-	const [ queryLabels, setQueryLabels ] = useState([])
-	console.log('qlabels', queryLabels)
+	const [ tags, setTags ] = useState([])
 
 	const addToQuery = (label) => {
-		setQueryLabels([ ...queryLabels, label ])
-	}
+    //setQueryLabels([ ...queryLabels, label ])
+    setQuery(query + ',' + label)
+  }
+  console.log('query', query, query.split(','))
 
 	const placeholder = 'enter search term or select a label'
 
-	console.log('query', query)
 	return (
 		<div className='search-input-component'>
 			<div className='filter-icon-container'>
@@ -33,7 +33,7 @@ export const SearchInput = ({ label }) => {
 			<div className='search-input-container'>
 				<label htmlFor='search-input'>{label}</label>
 				<input
-					placeholder={queryLabels.join(' ') || query}
+					placeholder={placeholder || query}
 					id='search-input'
 					type='search'
 					className='search-input'
@@ -42,7 +42,7 @@ export const SearchInput = ({ label }) => {
 				/>
 				{labelsOpen ? (
 					<div>
-						<FiXSquare className='feather-icon' onClick={() => toggleLabels(!labelsOpen)} />
+						<FiXSquare className='open-close-icon' onClick={() => toggleLabels(!labelsOpen)} />
 						<div className='search-input-label-container'>
 							{labels.map((label, i) => (
 								<span key={i} onClick={() => addToQuery(label.name)}>
@@ -53,9 +53,12 @@ export const SearchInput = ({ label }) => {
 					</div>
 				) : (
 					<div>
-						<FiPlusSquare className='feather-icon' onClick={() => toggleLabels(!labelsOpen)} />
+						<FiPlusSquare className='open-close-icon' onClick={() => toggleLabels(!labelsOpen)} />
 					</div>
-				)}
+        )}
+        <div className='tags-row'>
+          {query.split(',').map((ql) => <Tag>{ql}</Tag>)}
+        </div>
 			</div>
 			<div className='search-close-container'>
 				<FiX className='close-x' onClick={() => setQuery('')} />

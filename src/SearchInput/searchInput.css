@@ -55,6 +55,17 @@
 	font-size: 1.5ch;
 }
 
+.tags-row {
+  background-color: red;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 30px;
+  padding: 2px 0;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 75px;
+}
+
 .search-input-container .search-input-label-container {
 	background-color: #fafafa;
 	opacity: 0.8;
@@ -81,11 +92,12 @@
 	font-size: 3ch;
 }
 
-.feather-icon {
+.open-close-icon {
 	color: #333;
 	font-size: 32px;
 	transform: translate(0, -32px);
-	cursor: pointer;
+  cursor: pointer;
+  position: relative;
 }
 
 .search-input-component .filter-icon {
